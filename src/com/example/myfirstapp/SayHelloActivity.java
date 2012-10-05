@@ -16,11 +16,9 @@ public class SayHelloActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
         Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(MainActivity.EXTRA_NAME);
         
         TextView HiMsg = (TextView) findViewById(R.id.hiText);
-        HiMsg.setTextSize(40);
         HiMsg.setText(message);
-        setContentView(HiMsg);
     }
 }

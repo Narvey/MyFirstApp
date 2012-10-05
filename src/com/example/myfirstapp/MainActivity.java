@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 public class MainActivity extends Activity {
 	public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+	public final static String EXTRA_NAME = "com.example.myfirstapp.NAME";
 	public void sendMessage(View view){
 		Intent intent = new Intent(this, DisplayMessageActivity.class);
 		EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -20,7 +21,7 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(this, SayHelloActivity.class);
 		EditText editText = (EditText) findViewById(R.id.name);
 		String message = editText.getText().toString();
-		intent.putExtra(EXTRA_MESSAGE, message);
+		intent.putExtra(EXTRA_NAME, message);
 		startActivity(intent);
 	}
     @Override
