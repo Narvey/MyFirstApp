@@ -15,6 +15,13 @@ public class MainActivity extends Activity {
 		String message = editText.getText().toString();
 		intent.putExtra(EXTRA_MESSAGE, message);
 		startActivity(intent);
+	}	
+	public void sayHi(View view){
+		Intent intent = new Intent(this, SayHelloActivity.class);
+		EditText editText = (EditText) findViewById(R.id.name);
+		String message = editText.getText().toString();
+		intent.putExtra(EXTRA_MESSAGE, message);
+		startActivity(intent);
 	}
     @Override
     public void onCreate(Bundle savedInstanceState) {
